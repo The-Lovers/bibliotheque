@@ -47,11 +47,23 @@ class User extends Authenticatable
         return $this->hasMany(Borrow::class);
     }
 
-    public function isLibrarian(){
-        return $this->role === 'librarian';
+    public function profiles() {
+        return $this->belongsToMany(Profile::class)->withTimestamps();
     }
 
-    public function isReader(){
-        return $this->role === 'reader';
+    public function hasProfile(string $label): bool {
+        return $this->profiles()->where('label', $label)->exists();
+    }
+
+    public function isLibrarian(): bool {
+        return $this->hasProfile('librarian');
+    }
+
+    public function isReader(): bool {
+        return $this->hasProfile('reader');
+    }
+
+    public function isAdmin(): bool {
+        return $this->hasProfile('admin');
     }
 }

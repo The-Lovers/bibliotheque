@@ -13,4 +13,7 @@ class Profile extends Model
         'label',
         'description',
     ];
+    public function users() {
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
 }

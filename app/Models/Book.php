@@ -12,6 +12,7 @@ class Book extends Model
         'title',
         'description',
         'cover_image',
+        'browsing',
         'author_id',
         'published_year',
         'is_available',

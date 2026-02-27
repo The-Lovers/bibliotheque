@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('cover_image')->nullable();
+            $table->string('browsing')->nullable();
             $table->foreignId('author_id')->constrained()->onDelete('cascade');
             $table->year('published_year')->nullable();
             $table->boolean('is_available')->default(true);

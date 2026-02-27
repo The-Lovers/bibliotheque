@@ -14,7 +14,7 @@ class BorrowPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 
     /**
@@ -46,7 +46,7 @@ class BorrowPolicy
      */
     public function delete(User $user, Borrow $borrow): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 
     /**
@@ -54,7 +54,7 @@ class BorrowPolicy
      */
     public function restore(User $user, Borrow $borrow): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 
     /**
@@ -62,6 +62,6 @@ class BorrowPolicy
      */
     public function forceDelete(User $user, Borrow $borrow): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 }

@@ -37,7 +37,7 @@ class AuthorPolicy
      */
     public function update(User $user, Author $author): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 
     /**
@@ -45,7 +45,7 @@ class AuthorPolicy
      */
     public function delete(User $user, Author $author): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 
     /**
@@ -53,7 +53,7 @@ class AuthorPolicy
      */
     public function restore(User $user, Author $author): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 
     /**
@@ -61,6 +61,6 @@ class AuthorPolicy
      */
     public function forceDelete(User $user, Author $author): bool
     {
-        return $user->isLibrarian();
+        return $user->isLibrarian() || $user->isAdmin();
     }
 }

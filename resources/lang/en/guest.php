@@ -5,7 +5,7 @@
         ],
         'login' => [
             'title' => "Login",
-            'first-title' => "Login to <strong>Online Library</strong>",
+            'first-title' => "<strong>Online Library</strong>",
             'description' => "Online Library, Your Books in One Click !",
             'username' => "Username (Email)",
             'password' => "Password",

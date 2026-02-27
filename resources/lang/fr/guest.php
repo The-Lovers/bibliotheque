@@ -5,8 +5,8 @@
         ],
         'login' => [
             'title' => "Conexion",
-            'first-title' => "Connectez-vous à <strong>Bibliothèque en Ligne</strong>",
-            'description' => "Bibliothèque en Ligne, Vos livres en un Clic !",
+            'first-title' => "<strong>Bibliothèque en Ligne</strong>",
+            'description' => "La lecture en un Clic !",
             'username' => "Nom d'utilisateur (Email)",
             'password' => "Mot de passe",
             'username-placeholder' => "exemple@email.com",

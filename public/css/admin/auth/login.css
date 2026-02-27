@@ -173,4 +173,30 @@ h2 {
   color: #fff !important;
   background-color: rgb(222.1201716738, 94.0858369099, 3.8798283262) !important;
   border-color: rgb(222.1201716738, 94.0858369099, 3.8798283262) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .bg {
+    display: none !important;
+  }
+}
+.perso {
+  display: flex;
+  flex-direction: column;
+}
+
+.perso a {
+  position: relative;
+  text-align: center;
+}
+
+.perso img {
+  width: 150px;
+  height: auto;
+}
+
+.d-flex {
+  justify-content: space-between;
+  padding-right: 2.5%;
+  padding-left: 2.5%;
 }/*# sourceMappingURL=login.css.map */

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('lib/font-awesome-6.5.0/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/icomoon/style.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/css/owl.carousel.min.css') }}">
-    <link rel="shortcut icon" href="{{ asset('images/logo/log-fr.jpg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/logo/log-' . app()->getLocale() . '.jpg') }}" type="image/x-icon">
     @yield('css')
     <title>@yield('title', __('guest.home.title'))</title>
 </head>
